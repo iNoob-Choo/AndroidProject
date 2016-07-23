@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.inoob.updatedcalculator.NumberPage"
+    tools:showIn="@layout/activity_number_page">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_name"
+        android:textSize="30sp"
+        android:id="@+id/btnSend"
+        android:layout_gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="sendMessage"/>
+
+    <EditText
+        android:layout_weight="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/get_name"
+        android:textSize="30sp"
+        android:id="@+id/getName" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number"
+        android:textSize="30sp"
+        android:id="@+id/num_1"
+        android:layout_above="@+id/num_2"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="55dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textSize="10sp"
+        android:id="@+id/btnAdd"
+        android:layout_marginTop="65dp"
+        android:layout_below="@+id/num_2"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract"
+        android:textSize="10sp"
+        android:id="@+id/btnsub"
+        android:layout_alignTop="@+id/btnAdd"
+        android:layout_alignEnd="@+id/getName" />
+
+
+
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number"
+        android:id="@+id/num_2"
+        android:textSize="30sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+
+
+
+</RelativeLayout>

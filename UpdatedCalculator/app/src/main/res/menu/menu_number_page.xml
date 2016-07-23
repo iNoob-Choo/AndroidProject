@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.inoob.updatedcalculator.NumberPage">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_add"
+        android:orderInCategory="100"
+        android:title="@string/adding"
+        android:icon="@drawable/ic_add_black_24dp"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sub"
+        android:orderInCategory="100"
+        android:title="Subtracting"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_divide"
+        android:orderInCategory="100"
+        android:title="Divide"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_multi"
+        android:orderInCategory="100"
+        android:title="Multiply"
+        app:showAsAction="never" />
+
+
+
+
+
+</menu>
