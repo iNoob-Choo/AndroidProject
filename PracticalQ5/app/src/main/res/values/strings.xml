@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PracticalQ5</string>
+    <string name="action_settings">Settings</string>
+    <string name="xcoor">X-Coordinate</string>
+    <string name="ycoor">Y-Coordinate</string>
+    <string name="yvalue1">Y</string>
+    <string name="xvalue1">X</string>
+    <string name="xvalue2">X</string>
+    <string name="yvalue2">Y</string>
+    <string name="mid">Mid Point</string>
+</resources>
