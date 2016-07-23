@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PracticalQ3</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_num">First Number</string>
+    <string name="sec_num">Second Number</string>
+    <string name="answer">Results</string>
+    <string name="addition">Add</string>
+    <string name="subtract">Subtract</string>
+    <string name="multiply">Multiplication</string>
+    <string name="divide">Divide</string>
+</resources>
