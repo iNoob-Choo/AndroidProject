@@ -8,4 +8,5 @@
     <string name="subtract">Subtract</string>
     <string name="multiply">Multiplication</string>
     <string name="divide">Divide</string>
+    <string name="title_activity_result_screen">ResultScreen</string>
 </resources>

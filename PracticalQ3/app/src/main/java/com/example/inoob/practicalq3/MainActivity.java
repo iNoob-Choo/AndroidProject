@@ -1,5 +1,6 @@
 package com.example.inoob.practicalq3;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView result;
     private Button add,sub, multi, div;
     private double number1,number2, results;
+    private String sum;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -68,8 +70,11 @@ public class MainActivity extends AppCompatActivity {
                 number2 = Double.parseDouble(num2.getText().toString());
 
                 results = number1 + number2;
+                Intent intent=new Intent(getApplicationContext(),ResultScreen.class);
+                sum=Double.toString(results);
 
-                result.setText(Double.toString(results));
+                intent.putExtra("results",sum);
+                startActivity(intent);
 
 
             }
@@ -81,7 +86,13 @@ public class MainActivity extends AppCompatActivity {
                 number1 = Double.parseDouble(num1.getText().toString());
                 number2 = Double.parseDouble(num2.getText().toString());
                 results=number1-number2;
-                result.setText(Double.toString(results));
+                Intent intent=new Intent(getApplicationContext(),ResultScreen.class);
+                sum=Double.toString(results);
+
+                intent.putExtra("results",sum);
+                startActivity(intent);
+
+
 
             }
         });
@@ -92,7 +103,13 @@ public class MainActivity extends AppCompatActivity {
                 number1 = Double.parseDouble(num1.getText().toString());
                 number2 = Double.parseDouble(num2.getText().toString());
                 results=number1*number2;
-                result.setText(Double.toString(results));
+                Intent intent=new Intent(getApplicationContext(),ResultScreen.class);
+                sum=Double.toString(results);
+
+                intent.putExtra("results",sum);
+                startActivity(intent);
+
+
 
             }
         });
@@ -104,7 +121,13 @@ public class MainActivity extends AppCompatActivity {
                 number2 = Double.parseDouble(num2.getText().toString());
 
                     results = number1 / number2;
-                result.setText(Double.toString(results));
+                Intent intent=new Intent(getApplicationContext(),ResultScreen.class);
+                sum=Double.toString(results);
+
+                intent.putExtra("results",sum);
+                startActivity(intent);
+
+
 
 
 
