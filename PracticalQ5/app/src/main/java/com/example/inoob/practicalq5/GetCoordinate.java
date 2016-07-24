@@ -10,14 +10,14 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
-import android.widget.TextView;
+
 
 
 public class GetCoordinate extends AppCompatActivity {
 
-    private TextView midx,midy;
+
     private EditText x1,x2,y1,y2;
-    private double X1,X2,Y1,Y2,MIDx,MIDy;
+    private double X1,X2,Y1,Y2;
 
 
 
@@ -28,7 +28,15 @@ public class GetCoordinate extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragment_place,InputFragment.newInstance()).commit();
+
+
+
+
+
+
+        final FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +45,6 @@ public class GetCoordinate extends AppCompatActivity {
                 x2=(EditText)findViewById(R.id.x2);
                 y1=(EditText)findViewById(R.id.y1);
                 y2=(EditText)findViewById(R.id.y2);
-                midx=(TextView) findViewById(R.id.xmid);
-                midy=(TextView) findViewById(R.id.ymid);
 
                 X1=Double.parseDouble(x1.getText().toString());
                 X2=Double.parseDouble(x2.getText().toString());
@@ -60,9 +66,15 @@ public class GetCoordinate extends AppCompatActivity {
 
                 Point mid=l1.getMidPoint();
 
-                midx.setText(Double.toString(mid.getX()));
-                midy.setText(Double.toString(mid.getY()));
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.fragment_place,DisplayFragment.newInstance(mid,new DisplayFragment.OnDetachListener(){
+                            @Override
+                            public void onDetach(){
+                                fab.setEnabled(true);
+                            }
 
+                        })).addToBackStack(null).commit();
+                fab.setEnabled(false);
 
             }
         });
