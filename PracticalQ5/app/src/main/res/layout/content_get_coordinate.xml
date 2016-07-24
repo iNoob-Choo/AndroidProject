@@ -37,6 +37,7 @@
             android:inputType="number|numberDecimal|numberSigned"
             android:hint="@string/yvalue1"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/x2"
             android:hint="@string/xvalue2"
-            android:inputType="number|numberDecimal|numberSigned">
+            android:inputType="number|numberDecimal|numberSigned"/>
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -69,17 +70,21 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/mid"/>
        <TextView
            android:layout_weight="1"
            android:layout_width="0dp"
            android:layout_height="wrap_content"
+           android:textSize="40sp"
            android:id="@+id/xmid"/>
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textSize="40sp"
             android:id="@+id/ymid"
             android:layout_weight="1"/>
 

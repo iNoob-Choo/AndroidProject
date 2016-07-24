@@ -8,8 +8,17 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+
 
 public class GetCoordinate extends AppCompatActivity {
+
+    private TextView midx,midy;
+    private EditText x1,x2,y1,y2;
+    private double X1,X2,Y1,Y2,MIDx,MIDy;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +28,33 @@ public class GetCoordinate extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                x1=(EditText)findViewById(R.id.x1);
+                x2=(EditText)findViewById(R.id.x2);
+                y1=(EditText)findViewById(R.id.y1);
+                y2=(EditText)findViewById(R.id.y2);
+                midx=(TextView) findViewById(R.id.xmid);
+                midy=(TextView) findViewById(R.id.ymid);
+
+                X1=Double.parseDouble(x1.getText().toString());
+                X2=Double.parseDouble(x2.getText().toString());
+                Y1=Double.parseDouble(y1.getText().toString());
+                Y2=Double.parseDouble(y2.getText().toString());
+
+                Point p1=new Point(X1,Y1);
+                Point p2=new Point(X2,Y2);
+
+                Line l1=new Line(p1,p2);
+
+                Point mid=l1.getMidPoint();
+
+                midx.setText(Double.toString(mid.getX()));
+                midy.setText(Double.toString(mid.getY()));
+
+
             }
         });
     }
