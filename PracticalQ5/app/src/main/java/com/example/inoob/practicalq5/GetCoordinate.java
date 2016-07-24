@@ -1,5 +1,6 @@
 package com.example.inoob.practicalq5;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -46,6 +47,14 @@ public class GetCoordinate extends AppCompatActivity {
 
                 Point p1=new Point(X1,Y1);
                 Point p2=new Point(X2,Y2);
+
+                Bundle extras=new Bundle();
+                Intent send=new Intent(GetCoordinate.this,MidPoint.class);
+                extras.putSerializable("point",p1);
+                extras.putSerializable("points",p2);
+
+                send.putExtras(extras);
+                startActivity(send);
 
                 Line l1=new Line(p1,p2);
 
