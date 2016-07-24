@@ -8,4 +8,5 @@
     <string name="xvalue2">X</string>
     <string name="yvalue2">Y</string>
     <string name="mid">Mid Point</string>
+    <string name="title_activity_mid_point">Mid Point</string>
 </resources>
