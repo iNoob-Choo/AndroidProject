@@ -13,82 +13,20 @@
     tools:context="com.example.inoob.practicalq5.GetCoordinate"
     tools:showIn="@layout/activity_get_coordinate">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content"
+        android:text="This Is A MidPoint Calculator"
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/xcoor"/>
-        <EditText
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/x1"
-            android:inputType="number|numberSigned|numberDecimal"
-            android:hint="@string/xvalue1"/>
-        <EditText
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/y1"
-            android:inputType="number|numberDecimal|numberSigned"
-            android:hint="@string/yvalue1"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/ycoor"/>
-        <EditText
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/x2"
-            android:hint="@string/xvalue2"
-            android:inputType="number|numberDecimal|numberSigned"/>
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/y2"
-            android:hint="@string/yvalue2"
-            android:layout_weight="1"
-            android:inputType="number|numberSigned|numberDecimal"
-            />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/mid"/>
-       <TextView
-           android:layout_weight="1"
-           android:layout_width="0dp"
-           android:layout_height="wrap_content"
-           android:textSize="40sp"
-           android:id="@+id/xmid"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="40sp"
-            android:id="@+id/ymid"
-            android:layout_weight="1"/>
-
-    </LinearLayout>
+        android:id="@+id/fragment_place"></FrameLayout>
 
 
 

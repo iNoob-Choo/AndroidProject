@@ -1,0 +1,94 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    android:rowCount="2"
+    tools:context="com.example.inoob.practicalq5.InputFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="2"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Point 1" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="4">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/x1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="X-coordinate"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLength="10" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="4">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/y1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="Y-coordinate"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLength="10" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="2"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="20dp"
+        android:text="Point 2" />
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="4">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/x2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="X-coordinate"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLength="10" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="4">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/y2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:hint="Y-coordinate"
+            android:inputType="numberDecimal|numberSigned"
+            android:maxLength="10" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+</GridLayout>
